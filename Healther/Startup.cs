@@ -35,6 +35,8 @@ namespace Healther
                 options.Password.RequiredLength = 5;
                 options.Password.RequireUppercase = false; // обязательно загоавная
                 options.Lockout.MaxFailedAccessAttempts = 5; //блокировка если пользователь ввёл 5 раз неправильно
+                options.User.RequireUniqueEmail = true;
+                options.SignIn.RequireConfirmedEmail = false; // подтверждение @
 
             });
             services.AddControllersWithViews();
